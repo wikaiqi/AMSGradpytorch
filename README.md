@@ -20,6 +20,9 @@ The optimal solution is x = -1.
 So far I have not seen anyone done such test in pytorch and compare with the original AMSGrad paper. There is a test using TensorFlow [2], however,
 the test does not consider the constraint x=[-1, 1]. In fact, I found it's quite tricky to dealing with the constraint in TensorFlow, because 
 it is not easy to handle tf.cond (if else in TensorFlow).
+![Learning rate 0.1](/images/On01.png)
+![Learning rate 0.01](/images/On001.png)
+![Learning rate 0.001](/images/On0001.png)
 
 
 ### What did I find?
@@ -46,6 +49,7 @@ def ft_sto(x):
 
 Except to calculate the value of xt during the iteration,
 I also calculated the averge regret Rt/t. I found the value of Rt/t for Adam method decrease at the begining but increase after a while. Again, Adam does not converge to the optimal solution.
+![Learning rate 0.001](/images/sto.png)
 
 
 ## Reference
