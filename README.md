@@ -48,7 +48,8 @@ def ft_sto(x):
 ```
 
 Except to calculate the value of xt during the iteration,
-I also calculated the averge regret Rt/t. I found the value of Rt/t for Adam method decrease at the begining but increase after a while. Again, Adam does not converge to the optimal solution.
+I also calculated the averge regret Rt/t. I found the value of Rt/t for Adam method decrease at the begining but increase after a while. If we stop to early, then we may trap in a local minima. Again, Adam does not converge to the optimal solution.
+
 ![Learning rate 0.001](/images/sto.png)
 
 
